@@ -3,7 +3,7 @@
   "version": "edge",
   "slug": "zigbee2mqtt_edge",
   "description": "Development build of the Zigbee2mqtt add-on",
-  "uart": true,
+  "auto_uart": true,
   "url": "https://github.com/zigbee2mqtt/hassio-zigbee2mqtt/tree/master/zigbee2mqtt-edge",
   "startup": "application",
   "services": [
@@ -57,10 +57,12 @@
     "frontend": {
       "port": 8099
     },
-    "experimental": {},
+    "experimental": {
+      "new_api": true
+    },
     "socat": {
       "enabled": false,
-      "master": "pty,raw,echo=0,link=/tmp/ttyZ2M,mode=777",
+      "master": "pty,raw,echo=0,link=/dev/ttyZ2M,mode=777",
       "slave": "tcp-listen:8485,keepalive,nodelay,reuseaddr,keepidle=1,keepintvl=1,keepcnt=5",
       "options": "-d -d",
       "log": false
@@ -95,7 +97,7 @@
     "serial": {
       "port": "str",
       "disable_led": "bool?",
-      "adapter": "match(^zstack|deconz|zigate|ezsp$)?"
+      "adapter": "match(^zstack|deconz$)?"
     },
     "blocklist": [
       "str?"
@@ -119,7 +121,6 @@
       "rtscts": "bool?",
       "soft_reset_timeout": "int?",
       "adapter_concurrent": "int?",
-      "adapter_delay": "int?",
       "network_key": [
         "int?"
       ],
@@ -136,9 +137,7 @@
       "report": "bool?",
       "homeassistant_discovery_topic": "str?",
       "homeassistant_status_topic": "str?",
-      "homeassistant_legacy_triggers": "bool?",
-      "ikea_ota_use_test_url": "bool?",
-      "legacy_api": "bool?"
+      "homeassistant_legacy_triggers": "bool?"
     },
     "device_options": {
       "occupancy_timeout": "int?",
@@ -152,7 +151,8 @@
     },
     "experimental": {
       "transmit_power": "int?",
-      "output": "str?"
+      "output": "str?",
+      "new_api": "bool?"
     },
     "frontend": {
       "host": "str?",

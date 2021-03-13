@@ -1,41 +1,3 @@
-## 1.18.1-2
-- Added missing ezsp agapter type for serial
-
-## 1.18.1-1
-- Updated Zigbee2mqtt to version [`1.18.1`](https://github.com/Koenkk/zigbee2mqtt/releases/tag/1.18.1)
-- Fix OTA configuration required when starting
-
-## 1.18.0-1
-- Updated Zigbee2mqtt to version [`1.18.0`](https://github.com/Koenkk/zigbee2mqtt/releases/tag/1.18.0)
-
-## 1.17.1-4
-- Switched socat from `/share/zigbee2mqtt/ttyZ2M` to `/tmp/ttyZ2M`
-
-## 1.17.1-3
-- Added back `transmit_power` to `experimental`
-
-## 1.17.1-2
-- Fixes #24 for socat
-
-## 1.17.1-1
-- Removed `new_api` option as it's now default
-- Removed `transmit_power` from `experimental`
-- Added support for `legacy_api` option under `advanced`
-- Added support for `ikea_ota_use_test_url` option under `advanced`
-
-## 1.17.1
-- Updated Zigbee2mqtt to version [`1.17.1`](https://github.com/Koenkk/zigbee2mqtt/releases/tag/1.17.1)
-- Updated `"auto_uart": true` to use `"uart": true` instead
-- Reduced image size - thanks https://github.com/G1K
-- Deprecated `devices.js` method for adding support for a new device
-
-## 1.17.0
-- Updated Zigbee2mqtt to version [`1.17.0`](https://github.com/Koenkk/zigbee2mqtt/releases/tag/1.17.0)
-- New configuration options
-     - `advanced`
-         - `adapter_delay`
-     - `serial`
-         - `adapter: zigate`
 ## 1.16.2
 - Updated Zigbee2mqtt to version [`1.16.2`](https://github.com/Koenkk/zigbee2mqtt/releases/tag/1.16.2)
 - New configuration options
@@ -101,7 +63,7 @@ availability_blocklist: []
 availability_passlist: []
 ```
 
-Remove
+Remove 
 ```
 ban: []
 whitelist: []
@@ -280,6 +242,6 @@ whitelist: []
 - Download release archives instead of git cloning the specific branch
 - Updated Zigbee2mqtt to version [`0.1.1`](https://github.com/Koenkk/zigbee2mqtt/releases/tag/0.1.1)
 
-## 0.1.0
+## 0.1.0 
 - First versioned release of the add-on
 - Updated Zigbee2mqtt to version [`0.1.0`](https://github.com/Koenkk/zigbee2mqtt/releases/tag/0.1.0)

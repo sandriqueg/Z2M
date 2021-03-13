@@ -5,13 +5,6 @@
 
 # Upgrading the Zigbee2mqtt version
 So you want to bump the zigbee2mqtt version because I'm too slow. Here's how:
-1. Change the version number in `zigbee2mqtt/config.json`: `"version": "$NEW_VERSION"`
-2. Update `zigbee2mqtt/CHANGELOG.md`
-3. Commit the changes to `dev` branch
-4. Publish a new "Release". Very important you specify Target: dev. Example
-```
-Tag version: v1.17.1  @ Target: dev
-Release title: v1.17.1
-```
-5. When the pipelines finish the [build](https://dev.azure.com/zigbee2mqtt/Zigbee2mqtt%20Add-on/_build?definitionId=10) create a PR to `master`
-6. Use **Squash and Merge** option
+1. Change the version number in `zigbee2mqtt/Dockerfile`: `ENV ZIGBEE2MQTT_VERSION="$NEW_VERSION"`
+2. Change the version number in `zigbee2mqtt/config.json`: `"version": "$NEW_VERSION"`
+3. Add any new configuration options to `zigbee2mqtt/config.json` and `zigbee2mqtt-edge/config.json`.
